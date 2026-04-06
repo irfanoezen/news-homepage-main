@@ -14,48 +14,74 @@
     <title>Frontend Mentor | News homepage</title>
   </head>
   <body>
-    <header>
-      <a href="#">
-        <img
-          src="assets/images/logo.svg"
-          alt="Home link"
-          width="64"
-          height="40"
-        >
-      </a>
-      <nav>
-        <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="">New</a></li>
-          <li><a href="">Popular</a></li>
-          <li><a href="">Trending</a></li>
-          <li><a href="">Categories</a></li>
-        </ul>
-      </nav>
+    <header class="grid-layout">
+      <div class="header-content">
+        <div class="logo-container">
+          <a href="#">
+            <img
+              src="assets/images/logo.svg"
+              alt="Home link"
+              width="64"
+              height="40"
+            >
+          </a>
+        </div>
+        <nav class="navbar">
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">New</a></li>
+            <li><a href="">Popular</a></li>
+            <li><a href="">Trending</a></li>
+            <li><a href="">Categories</a></li>
+          </ul>
+        </nav>
+        <div class="hamburger-icon-container">
+          <svg
+            width="40"
+            height="17"
+            xmlns="http://www.w3.org/2000/svg"
+            role="img"
+            aria-label="Open navigation menu"
+          >
+            <title>Open navigation menu</title>
+            <g fill="#00001A" fill-rule="evenodd">
+              <path d="M0 0h40v3H0zM0 7h40v3H0zM0 14h40v3H0z" />
+              <path d="M0 0h40v3H0z" />
+            </g>
+          </svg>
+        </div>
+      </div>
     </header>
-    <main>
-      <section class="hero">
-        <article class="feature">
-          <picture class="feature__image">
-            <source media="(min-width: 1440px)" srcset="assets/images/image-web-3-desktop.jpg">
-            <img src="assets/images/image-web-3-mobile.jpg" alt="">
-          </picture>
+    <main class="main grid-layout">
+      <!-- <section class="hero"> -->
+      <article class="feature">
+        <picture class="feature__image">
+          <source
+            media="(min-width: 768px)"
+            srcset="assets/images/image-web-3-desktop.jpg"
+          >
+          <img src="assets/images/image-web-3-mobile.jpg" alt="">
+        </picture>
+        <div class="feature__content">
           <h1 class="feature__title">The Bright Future of Web 3.0?</h1>
-          <div class="feature__text">
-            <p>
+          <div>
+            <p class="feature__text">
               We dive into the next evolution of the web that claims to put the
               power of the platforms back into the hands of the people. But is
               it really fulfilling its promise?
             </p>
             <a class="feature__link" href="#"> Read more</a>
           </div>
-        </article>
-        <div class="new">
-          <h2>New</h2>
+        </div>
+      </article>
+      <div class="news">
+        <h2>New</h2>
+        <div class="news-content">
           <article class="new__post">
             <a href="#"> <h3>Hydrogen VS Electric Cars</h3> </a>
             <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
           </article>
+          <div class="horizontal-line"></div>
           <article class="new__post">
             <a href="#"> <h3>The Downsides of AI Artistry</h3> </a>
             <p>
@@ -63,6 +89,7 @@
               generation?
             </p>
           </article>
+          <div class="horizontal-line"></div>
           <article class="new__post">
             <a href="#"> <h3>Is VC Funding Drying Up?</h3> </a>
             <p>
@@ -71,25 +98,32 @@
             </p>
           </article>
         </div>
-      </section>
+      </div>
+      <!-- </section> -->
       <section class="blog">
         <article class="blog__post">
           <img src="assets/images/image-retro-pcs.jpg" alt="">
-          <div>01</div>
-          <h4>Reviving Retro PCs</h4>
-          <p>What happens when old PCs are given modern upgrades?</p>
+          <div class="blog__post-content">
+            <div>01</div>
+            <h4>Reviving Retro PCs</h4>
+            <p>What happens when old PCs are given modern upgrades?</p>
+          </div>
         </article>
         <article class="blog__post">
           <img src="assets/images/image-top-laptops.jpg" alt="">
-          <div>02</div>
-          <h4>Top 10 Laptops of 2022</h4>
-          <p>Our best picks for various needs and budgets.</p>
+          <div class="blog__post-content">
+            <div>02</div>
+            <h4>Top 10 Laptops of 2022</h4>
+            <p>Our best picks for various needs and budgets.</p>
+          </div>
         </article>
         <article class="blog__post">
           <img src="assets/images/image-gaming-growth.jpg" alt="">
-          <div>03</div>
-          <h4>The Growth of Gaming</h4>
-          <p>How the pandemic has sparked fresh opportunities.</p>
+          <div class="blog__post-content">
+            <div>03</div>
+            <h4>The Growth of Gaming</h4>
+            <p>How the pandemic has sparked fresh opportunities.</p>
+          </div>
         </article>
       </section>
     </main>
