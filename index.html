@@ -1,49 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <title>Frontend Mentor | News homepage</title>
-  <link rel="stylesheet" href="sass/style.css">
-  <script src="script.js" defer></script>
-</head>
-<body>
-
-  Home
-  New
-  Popular
-  Trending
-  Categories
-
-  The Bright Future of Web 3.0?
-
-  We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people.
-  But is it really fulfilling its promise?
-
-  Read more
-
-  New
-
-  Hydrogen VS Electric Cars
-  Will hydrogen-fueled cars ever catch up to EVs?
-
-  The Downsides of AI Artistry
-  What are the possible adverse effects of on-demand AI image generation?
-
-  Is VC Funding Drying Up?
-  Private funding by VC firms is down 50% YOY. We take a look at what that means.
-
-  01
-  Reviving Retro PCs
-  What happens when old PCs are given modern upgrades?
-
-  02
-  Top 10 Laptops of 2022
-  Our best picks for various needs and budgets.
-
-  03
-  The Growth of Gaming
-  How the pandemic has sparked fresh opportunities.
-</body>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+		<title>Frontend Mentor | News homepage</title>
+		<link rel="stylesheet" href="sass/style.css">
+		<script src="script.js" defer></script>
+	</head>
+	<body>
+		<header class="grid-layout">
+			<a class="logo" href=""> <img src="assets/images/logo.svg" alt="News homepage" width="64" height="40"> </a>
+			<nav>
+				<button class="menu__btn" type="button"><img src="assets/images/icon-menu.svg" alt=""></button>
+				<ul>
+					<li><a href="">Home</a></li>
+					<li><a href="">New</a></li>
+					<li><a href="">Popular</a></li>
+					<li><a href="">Trending</a></li>
+					<li><a href="">Categories </a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<section class="hero grid-layout">
+				<article class="feature">
+					<picture>
+						<source media="(min-width: 768px)" srcset="assets/images/image-web-3-desktop.jpg">
+						<img class="feature__image" src="assets/images/image-web-3-mobile.jpg" alt="">
+					</picture>
+					<div class="feature__content">
+						<h1 class="feature__headline">The Bright Future of Web 3.0?</h1>
+						<div>
+							<p class="feature__description">We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?</p>
+							<a class="feature__button" href="">Read more</a>
+						</div>
+					</div>
+				</article>
+				<section class="new">
+					<h2 class="new__title">New</h2>
+					<article class="new__post">
+						<h3 class="new__headline"><a href="">Hydrogen VS Electric Cars</a></h3>
+						<p class="new__description">Will hydrogen-fueled cars ever catch up to EVs?</p>
+					</article>
+					<div class="horizontal-line"></div>
+					<article class="new__post">
+						<h3 class="new__headline"><a href="">The Downsides of AI Artistry</a></h3>
+						<p class="new__description">What are the possible adverse effects of on-demand AI image generation?</p>
+					</article>
+					<div class="horizontal-line"></div>
+					<article class="new__post">
+						<h3 class="new__headline"><a href="">Is VC Funding Drying Up?</a></h3>
+						<p class="new__description">Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+					</article>
+				</section>
+			</section>
+			<section class="blog grid-layout">
+				<h2 class="blog__title">Blog</h2>
+				<article class="blog__post post__1">
+					<img class="blog__image" src="assets/images/image-retro-pcs.jpg" alt="">
+					<div class="blog__content">
+						<div class="blog__number">01</div>
+						<h3 class="blog__headline">Reviving Retro PCs</h3>
+						<p class="blog__description">What happens when old PCs are given modern upgrades?</p>
+					</div>
+				</article>
+				<article class="blog__post post__2">
+					<img class="blog__image" src="assets/images/image-top-laptops.jpg" alt="">
+					<div class="blog__content">
+						<div class="blog__number">02</div>
+						<h3 class="blog__headline">Top 10 Laptops of 2022</h3>
+						<p class="blog__description">Our best picks for various needs and budgets.</p>
+					</div>
+				</article>
+				<article class="blog__post post__3">
+					<img class="blog__image" src="assets/images/image-gaming-growth.jpg" alt="">
+					<div class="blog__content">
+						<div class="blog__number">03</div>
+						<h3 class="blog__headline">The Growth of Gaming</h3>
+						<p class="blog__description">How the pandemic has sparked fresh opportunities.</p>
+					</div>
+				</article>
+			</section>
+		</main>
+	</body>
 </html>

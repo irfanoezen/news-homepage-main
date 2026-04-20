@@ -1,0 +1,152 @@
+@use "../util/" as u;
+
+.hero {
+  row-gap: u.rem(64);
+}
+
+.feature,
+.new {
+  grid-column: 2 / -2;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  row-gap: u.rem(24);
+}
+
+.feature__content {
+  display: grid;
+  row-gap: u.rem(24);
+
+  div {
+    display: flex;
+    flex-direction: column;
+    row-gap: u.rem(24);
+  }
+}
+
+.feature__headline {
+  font-size: u.rem(40);
+  font-weight: 800;
+  line-height: 1;
+  color: var(--navy-950);
+  max-width: 12ch;
+}
+
+.feature__description {
+  font-size: u.rem(15);
+  line-height: 1.5;
+  color: var(--navy-600);
+}
+
+.feature__button {
+  align-self: flex-start;
+  text-decoration: none;
+  color: var(--navy-950);
+  text-transform: uppercase;
+  font-size: u.rem(14);
+  line-height: 1.5;
+  letter-spacing: 4.38px;
+  font-weight: 700;
+  background-color: var(--red-500);
+  padding: u.rem(12) u.rem(33);
+}
+
+@include u.breakpoint(tablet) {
+  .feature__headline {
+    max-width: 100%;
+  }
+}
+
+@include u.breakpoint(laptop) {
+  .hero {
+    row-gap: u.rem(0);
+    margin-block-end: u.rem(64);
+  }
+
+  .feature {
+    grid-column: 2 / 10;
+  }
+
+  .feature__content {
+    grid-template-columns: u.rem(350) auto;
+    column-gap: u.rem(32);
+
+    div {
+      justify-content: space-between;
+    }
+  }
+
+  .feature__headline {
+    grid-column: 1 / 2;
+    max-width: 8ch;
+    font-size: u.rem(56);
+  }
+
+  .feature__description,
+  .feature__button {
+    grid-column: 2 / -1;
+    align-self: start;
+  }
+}
+
+.new {
+  background-color: var(--navy-950);
+  padding: u.rem(21.5) u.rem(20.5);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+  margin-block-end: u.rem(64);
+}
+
+.new__title {
+  font-size: u.rem(32);
+  font-weight: 700;
+  color: var(--gold-400);
+}
+
+.new__headline a {
+  text-decoration: none;
+  font-size: u.rem(20);
+  font-weight: 700;
+  color: var(--white);
+}
+
+.new__headline {
+  margin-block-end: u.rem(8);
+}
+
+.new__description {
+  font-size: u.rem(15);
+  line-height: 1.5;
+  color: var(--grey-300);
+}
+
+.horizontal-line {
+  height: 1px;
+  background-color: var(--navy-600);
+}
+
+@include u.breakpoint(tablet) {
+  .new {
+    padding: u.rem(32) u.rem(41);
+  }
+
+  .new__title {
+    font-size: u.rem(40);
+  }
+}
+
+@include u.breakpoint(laptop) {
+  .new {
+    grid-column: 10 / -2;
+    margin-block-end: u.rem(0);
+    padding: u.rem(32) u.rem(23);
+  }
+
+  .new__title {
+    font-size: u.rem(32);
+  }
+}

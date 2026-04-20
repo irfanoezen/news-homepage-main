@@ -1,0 +1,71 @@
+@use "../util/" as u;
+
+.blog {
+  row-gap: u.rem(32);
+  margin-block-end: u.rem(80);
+}
+
+.blog__title {
+  display: none;
+}
+
+.blog__post {
+  grid-column: 2 / -2;
+
+  display: grid;
+  grid-template-columns: u.rem(100) auto;
+  column-gap: u.rem(24);
+}
+
+.blog__image {
+  grid-column: 1 / 2;
+}
+
+.blog__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.blog__headline {
+  font-size: u.rem(18);
+  font-weight: 800;
+  color: var(--navy-950);
+}
+
+.blog__number {
+  font-size: u.rem(32);
+  font-weight: 700;
+  color: var(--red-500);
+}
+
+.blog__description {
+  font-size: u.rem(15);
+  line-height: 1.5;
+  color: var(--navy-600);
+}
+
+@include u.breakpoint(tablet) {
+  .blog__content {
+    justify-content: center;
+    row-gap: u.rem(12);
+  }
+}
+
+@include u.breakpoint(laptop) {
+  .blog {
+    margin-block-end: u.rem(126);
+  }
+
+  .post__1 {
+    grid-column: 2 / 6;
+  }
+
+  .post__2 {
+    grid-column: 6 / 10;
+  }
+
+  .post__3 {
+    grid-column: 10 / -2;
+  }
+}

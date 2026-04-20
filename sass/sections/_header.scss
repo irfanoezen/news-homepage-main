@@ -1,0 +1,48 @@
+@use "../util/" as u;
+
+header {
+  align-items: center;
+  margin-block: u.rem(28) u.rem(32);
+}
+
+.logo {
+  grid-column: 2 / 3;
+}
+
+nav {
+  grid-column: 5 / -2;
+  justify-self: end;
+}
+
+.menu__btn {
+  border: none;
+  background-color: transparent;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: none;
+}
+
+@include u.breakpoint(laptop) {
+  header {
+    margin-block: u.rem(89) u.rem(64);
+  }
+
+  .menu__btn {
+    display: none;
+  }
+
+  nav ul {
+    display: flex;
+    column-gap: u.rem(40);
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: var(--navy-600);
+    font-size: u.rem(15);
+    line-height: 1;
+  }
+}
