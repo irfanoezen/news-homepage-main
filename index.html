@@ -11,15 +11,19 @@
 	<body>
 		<header class="grid-layout">
 			<a class="logo" href=""> <img src="assets/images/logo.svg" alt="News homepage" width="64" height="40"> </a>
-			<nav>
-				<button class="menu__btn" type="button"><img src="assets/images/icon-menu.svg" alt=""></button>
-				<ul>
+			<nav aria-label="site">
+				<button class="nav__menu-btn" type="button" aria-expanded="false" aria-labelledby="nav-label">
+					<span id="nav-label" hidden>navigation</span>
+					<img aria-hidden="true" src="assets/images/icon-menu.svg" alt="">
+				</button>
+				<ul class="nav__list">
 					<li><a href="">Home</a></li>
 					<li><a href="">New</a></li>
 					<li><a href="">Popular</a></li>
 					<li><a href="">Trending</a></li>
 					<li><a href="">Categories </a></li>
 				</ul>
+				<div class="nav__overlay" aria-hidden="true"></div>
 			</nav>
 		</header>
 		<main>
